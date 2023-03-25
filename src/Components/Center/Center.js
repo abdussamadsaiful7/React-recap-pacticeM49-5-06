@@ -13,6 +13,8 @@ const Center = (props) => {
             <p>Email: {email}</p>
             <p>Address: {address}</p>
             <p>Company: {company}</p>
+            <button className="bg-blue-600 rounded-md text-white hover:text-blue-600 hover:bg-white py-1 px-2 m-2 font-bold">Add to Cart</button>
+            <button className="bg-blue-600 rounded-md text-white hover:text-blue-600 hover:bg-white py-1 px-2 m-2 font-bold">Remove</button>
         </div>
     );
 };
