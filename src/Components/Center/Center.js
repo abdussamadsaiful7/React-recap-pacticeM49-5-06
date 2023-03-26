@@ -1,10 +1,17 @@
 import React from 'react';
-import { addToDb } from '../../Utilities/Fakedb';
+import { addToDb, removeFromDb } from '../../Utilities/Fakedb';
 import './Center.css';
 
 const Center = (props) => {
+
+    //add button function
     const addToCart =(id) =>{
         addToDb(id);
+    }
+
+    //remove button function
+    const  removeFromCart =id => {
+        removeFromDb(id);
     }
 
     //console.log(props)
@@ -20,7 +27,7 @@ const Center = (props) => {
             <p>Company: {company}</p>
             <button onClick={()=>addToCart(id)} className="bg-blue-600 rounded-md text-white hover:text-blue-600 
              hover:bg-white py-1 px-2 m-2 font-bold">Add to Cart</button>
-            <button className="bg-blue-600 rounded-md text-white hover:text-blue-600 
+            <button onClick={()=>removeFromCart(id)} className="bg-blue-600 rounded-md text-white hover:text-blue-600 
              hover:bg-white py-1 px-2 m-2 font-bold">Remove</button>
         </div>
     );
